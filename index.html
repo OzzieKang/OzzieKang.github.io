@@ -1,37 +1,46 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/OzzieKang/OzzieKang.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/OzzieKang/OzzieKang.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+<!DOCTYPE html>
+<html>
+<head>    
+  <title>Ozzie</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />   
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet" /> 
+ </head>
+  <body>   
+    <nav class="navbar navbar-inverse navbar-fixed-top">    
+      <div class="container">          
+        <div class="navbar-header">               
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">            
+            <span class="sr-only">Toggle navigation</span>       
+            <span class="icon-bar"></span>                  
+            <span class="icon-bar"></span>                  
+            <span class="icon-bar"></span>              
+          </button>         
+          <a class="navbar-brand">NGA Issue </a>    
+        </div>           
+        <div id="navbar" class="collapse navbar-collapse">     
+          <ul class="nav navbar-nav">               
+            <li class="active"><a href="#/why">Home</a></li>   
+            <li><a href="#/why">Why</a></li>         
+            <li><a href="#/list">NGA Tool List</a></li>       
+          </ul>       
+        </div>         
+        <!--/.nav-collapse -->   
+      </div>  
+    </nav>    
+    <div class="panel">   
+      <div class="container">      
+        <div class="main" ng-view></div>  
+      </div>      
+      <div class="page-header">         
+        <h1>NGA List       
+          <span class="label label-default" ng-class="warningLevel()" ng-hide="incompleteCount() == 0">{{incompleteCount()}}</span> 
+        </h1>      
+      </div>     
+    </div>   
+    <div>      
+      <p>Copyright (c) 2017. All rights reserved. Design by <a href="mailto:nextlife_ozzie@outlook.com">Ozzie</a></p>   
+    </div>
+  </body>
+</html>
