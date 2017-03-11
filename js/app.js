@@ -8,7 +8,7 @@ ozApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $
     });
 
     // use the HTML5 History API
-    $locationProvider.html5Mode({
-        enabled: true
-    });
+    //$locationProvider.html5Mode({
+    //    enabled: true
+    //});
 }]);
