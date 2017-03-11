@@ -1,10 +1,16 @@
 ﻿var ozApp = angular.module('ozApp', ['ngRoute']);
 
 ozApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-    $routeProvider.when('/article', {
+    $routeProvider.when('/home', {
+        templateUrl: '/partials/home.html'
+    }).when('/articles', {
         templateUrl: '/partials/articles.html'
+    }).when('/programing', {
+        templateUrl: '/partials/programing.html'
+    }).when('/tips', {
+        templateUrl: '/partials/tips.html'
     }).otherwise({
-        redirectTo: '/article'
+        redirectTo: '/'
     });
 
     // use the HTML5 History API
