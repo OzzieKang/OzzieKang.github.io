@@ -3,6 +3,7 @@
 <head>
     <title>Ozzie</title>
     <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="Scripts/jquery.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/angular.min.js"></script>
@@ -13,6 +14,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="css/starter-template.css" rel="stylesheet" />
+    <link href="css/normalize.css" rel="stylesheet" />
     <link rel="shortcut icon" href="img/Jack-JackParr.png" />
 </head>
 <body>
@@ -32,9 +34,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/programing">Programing <span class="sr-only">(current)</span></a></li>
-                    <li><a href="/articles">Articles </a></li>
-                    <li><a href="/tips">Tips </a></li>
+                    <li ng-repeat="page in pages"><a href="{{page.path}}">{{page.name}}</a></li>
                 </ul>
 
                 <form class="navbar-form navbar-right">
@@ -45,14 +45,27 @@
             </div>
         </div>
     </nav>
-    <div class="panel">
-        <div class="container">
-            <div class="main" ng-view></div>
+    <!--<div class="panel  panel-primary">
+        <div class="panel-heading">Page</div>-->
+        <div class="row">
+            <div class="col-xs-2 col-md-1">
+                <ul>
+                    <li>Hi</li>
+                    <li>Hi</li>
+                    <li>Hi</li>
+                </ul>
+            </div>
+
+            <div class="col-xs-12 col-md-8">
+                <div class="main" ng-view></div>
+            </div>
         </div>
-    </div>
+    <!--</div>-->
 
     <div>
-        <p>Copyright (c) 2017. All rights reserved. Design by <a href="mailto:nextlife_ozzie@outlook.com">Ozzie</a></p>
+        <footer>
+            <p>Copyright (c) 2017. All rights reserved. Design by <a href="mailto:nextlife_ozzie@outlook.com">Ozzie</a></p>
+        </footer>
     </div>
 </body>
 </html>

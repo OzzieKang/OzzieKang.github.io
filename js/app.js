@@ -2,7 +2,8 @@
 
 ozApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider.when('/home', {
-        templateUrl: '/partials/home.html'
+        templateUrl: '/partials/home.html',
+        controller: 'homeCtrl'
     }).when('/articles', {
         templateUrl: '/partials/articles.html'
     }).when('/programing', {
