@@ -34,7 +34,9 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav"  ng-controller="homeCtrl">
-                    <li ng-repeat="indexpage in indexpages"><a href="{{indexpage.path}}">{{indexpage.name}} <span class="badge">{{indexpage.count}}</span></a></li>
+                    <li><a href="#!/programing">Programing<span class="badge">{{RecordCount.ProgramingCount}}</span></a></li>
+                    <li><a href="#!/articles">Articles<span class="badge">{{RecordCount.ArticlesCount}}</span></a></li>
+                    <li><a href="#!/tips">Tips<span class="badge">{{RecordCount.TipsCount}}</span></a></li>
                 </ul>
 
                 <form class="navbar-form navbar-right">
