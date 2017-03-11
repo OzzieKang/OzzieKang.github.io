@@ -2,8 +2,7 @@
 
 ozApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider.when('/home', {
-        templateUrl: '/partials/home.html',
-        controller: 'homeCtrl'
+        templateUrl: '/partials/home.html'
     }).when('/articles', {
         templateUrl: '/partials/articles.html'
     }).when('/programing', {
@@ -11,7 +10,8 @@ ozApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $
     }).when('/tips', {
         templateUrl: '/partials/tips.html'
     }).otherwise({
-        redirectTo: '/'
+        redirectTo: '/',
+        controller: 'homeCtrl'
     });
 
     // use the HTML5 History API

@@ -12,9 +12,13 @@
     };
 });
 
-ozApp.factory('listID', function () {
+ozApp.factory('IndexPages', function () {
 
-    var data = {};
+    var data =[
+        { path: "/programing", name: "Programing" },
+        { path: "/articles", name: "Articles" },
+        { path: "/tips", name: "Tips" }
+    ];
 
     return {
         getData: function () {
@@ -27,11 +31,7 @@ ozApp.factory('listID', function () {
 });
 
 ozApp.controller("homeCtrl", ['$scope', function ($scope) {
-    $scope.pages = [
-        { path: "/programing", name: "Programing" },
-        { path: "/articles", name: "Articles" },
-        { path: "/tips", name: "Tips" }
-    ];
+    $scope.indexpages = IndexPages.getData();
 }]);
 
 ozApp.controller("ListController", ['$scope', '$routeParams', '$http', 'NgTableParams', 'ozAppData', 'listID', function ($scope, $routeParams, $http, NgTableParams, ozAppData, listID) {
