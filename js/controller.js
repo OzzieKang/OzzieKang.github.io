@@ -48,7 +48,7 @@ ozApp.controller("ProgramCtrl", ['$scope', '$http', '$routeParams', 'RecordCount
     RecordCount.ProgramingCount = $("section div div div a").length;
 
     $http.get("/data/color.json").then(function (response) {
-        $scope.Colors = response;
+        $scope.Colors = response.colors;
     });
 }]);
 
