@@ -36,9 +36,9 @@ ozApp.factory('listID', function () {
 
 ozApp.controller("homeCtrl", ['$scope', '$routeParams', 'TipsCount', function ($scope, $routeParams, TipsCount) {
     $scope.indexpages = [
-        { path: "/programing", name: "Programing" },
-        { path: "/articles", name: "Articles" },
-        { path: "/tips", name: "Tips" }
+        { path: "#!/programing", name: "Programing" },
+        { path: "#!/articles", name: "Articles" },
+        { path: "#!/tips", name: "Tips" }
     ];
     $scope.TipsCount = TipsCount;
     TipsCount.count = $("section div div div a").length;
