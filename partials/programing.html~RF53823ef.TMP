@@ -11,8 +11,8 @@
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
                     <table>
-                        <tr ng-repeat="color in Colors">
-                            <td ng-repeat="colr in color" bgcolor="{{colr}}"><span>{{colr}}</span></td>
+                        <tr ng-repeat="row in Colors">
+                            <td ng-repeat="col in row" bgcolor="{{col}}"><span>{{col}}</span></td>
                         </tr>
                     </table>
                 </div>
