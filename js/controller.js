@@ -46,7 +46,7 @@ ozApp.controller("homeCtrl", ['$scope', '$routeParams', 'TipsCount', function ($
         { path: "/tips", name: "Tips" }
     ];
     
-    $scope, $watch(function () {
+    $scope.$watch(function () {
         return TipsCount.getData();
     },
         function (newValue, oldValue) {
@@ -56,7 +56,7 @@ ozApp.controller("homeCtrl", ['$scope', '$routeParams', 'TipsCount', function ($
 
 ozApp.controller("TipsCtrl", ['$scope', '$routeParams', 'TipsCount', function ($scope, $routeParams, TipsCount) {
     $scope.tipsCount = TipsCount.getData();
-    $scope, $watch('tipsCount', function (newValue, oldValue) {
+    $scope.$watch('tipsCount', function (newValue, oldValue) {
         if (newValue !== oldValue) TipsCount.setData();
     });
     //$scope.tipsCount = TipsCount.getData();
