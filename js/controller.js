@@ -38,14 +38,14 @@ ozApp.factory('listID', function () {
 
 ozApp.controller("homeCtrl", ['$scope', '$routeParams', 'RecordCount', function ($scope, $routeParams, RecordCount) {
     $scope.RecordCount = RecordCount;
-    RecordCount.ProgramingCount = $("section div div div a").length;
-    RecordCount.ArticlesCount = $("section div div div a").length;
-    RecordCount.TipsCount = $("section div div div a").length;
+    RecordCount.ProgramingCount = $("section div div div").filter(".panel-heading").length;
+    RecordCount.ArticlesCount = $("section div div div").filter(".panel-heading").length;
+    RecordCount.TipsCount = $("section div div div").filter(".panel-heading").length;
 }]);
 
 ozApp.controller("ProgramCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', function ($scope, $http, $routeParams, RecordCount) {
     $scope.RecordCount = RecordCount;
-    RecordCount.ProgramingCount = $("section div div div a").length;
+    RecordCount.ProgramingCount = $("section div div div").filter(".panel-heading").length;
 
     $http.get("/data/color.json").then(function (response) {
         $scope.Colors = response.data.colors;
@@ -54,13 +54,13 @@ ozApp.controller("ProgramCtrl", ['$scope', '$http', '$routeParams', 'RecordCount
 
 ozApp.controller("ArticalCtrl", ['$scope', '$routeParams', 'RecordCount', function ($scope, $routeParams, RecordCount) {
     $scope.RecordCount = RecordCount;
-    RecordCount.ArticlesCount = $("section div div div a").length;
+    RecordCount.ArticlesCount = $("section div div div").filter(".panel-heading").length;
     //$scope.tipsCount = TipsCount.getData();
 }]);
 
 ozApp.controller("TipsCtrl", ['$scope', '$routeParams', 'RecordCount', function ($scope, $routeParams, RecordCount) {
     $scope.RecordCount = RecordCount;
-    RecordCount.TipsCount = $("section div div div a").length;
+    RecordCount.TipsCount = $("section div div div").filter(".panel-heading").length;
     //$scope.tipsCount = TipsCount.getData();
 }]);
 
