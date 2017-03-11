@@ -10,9 +10,9 @@
             </div>
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
-                    <table class="table">
+                    <table>
                         <tr ng-repeat="row in Colors">
-                            <td  ng-repeat="col in row" bgcolor="{{col}}""><span>{{col}}</span></td>
+                            <td ng-repeat="col in row" bgcolor="{{col}}"><span>{{col}}</span></td>
                         </tr>
                     </table>
                 </div>
@@ -28,7 +28,949 @@
             </div>
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <table border="0">
+                        <tbody>
+                            <tr>
+                                <td bgcolor="#FFFFFF" width="95" height="30"><span>#FFFFFF</span></td>
+                                <td bgcolor="#DDDDDD" width="95" height="30"><span>#DDDDDD</span></td>
+                                <td bgcolor="#AAAAAA" width="95" height="30">#AAAAAA</td>
+                                <td bgcolor="#888888" width="95" height="30">#888888</td>
+                                <td bgcolor="#666666" width="95" height="30">#666666</td>
+                                <td bgcolor="#444444" width="95" height="30">#444444</td>
+                                <td bgcolor="#000000" width="95" height="30">#000000</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#FFB7DD" width="95" height="30"><span>#FFB7DD</span></td>
+                                <td bgcolor="#FF88C2" width="95" height="30"><span>#FF88C2</span></td>
+                                <td bgcolor="#FF44AA" width="95" height="30">#FF44AA</td>
+                                <td bgcolor="#FF0088" width="95" height="30">#FF0088</td>
+                                <td bgcolor="#C10066" width="95" height="30">#C10066</td>
+                                <td bgcolor="#A20055" width="95" height="30">#A20055</td>
+                                <td bgcolor="#8C0044" width="95" height="30">#8C0044</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#FFCCCC" width="95" height="30"><span>#FFCCCC</span></td>
+                                <td bgcolor="#FF8888" width="95" height="30"><span>#FF8888</span></td>
+                                <td bgcolor="#FF3333" width="95" height="30">#FF3333</td>
+                                <td bgcolor="#FF0000" width="95" height="30">#FF0000</td>
+                                <td bgcolor="#CC0000" width="95" height="30">#CC0000</td>
+                                <td bgcolor="#AA0000" width="95" height="30">#AA0000</td>
+                                <td bgcolor="#880000" width="95" height="30">#880000</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#FFC8B4" width="95" height="30"><span>#FFC8B4</span></td>
+                                <td bgcolor="#FFA488" width="95" height="30"><span>#FFA488</span></td>
+                                <td bgcolor="#FF7744" width="95" height="30">#FF7744</td>
+                                <td bgcolor="#FF5511" width="95" height="30">#FF5511</td>
+                                <td bgcolor="#E63F00" width="95" height="30">#E63F00</td>
+                                <td bgcolor="#C63300" width="95" height="30">#C63300</td>
+                                <td bgcolor="#A42D00" width="95" height="30">#A42D00</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#FFDDAA" width="95" height="30"><span>#FFDDAA</span></td>
+                                <td bgcolor="#FFBB66" width="95" height="30"><span>#FFBB66</span></td>
+                                <td bgcolor="#FFAA33" width="95" height="30"><span>#FFAA33</span></td>
+                                <td bgcolor="#FF8800" width="95" height="30">#FF8800</td>
+                                <td bgcolor="#EE7700" width="95" height="30">#EE7700</td>
+                                <td bgcolor="#CC6600" width="95" height="30">#CC6600</td>
+                                <td bgcolor="#BB5500" width="95" height="30">#BB5500</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#FFEE99" width="95" height="30"><span>#FFEE99</span></td>
+                                <td bgcolor="#FFDD55" width="95" height="30"><span>#FFDD55</span></td>
+                                <td bgcolor="#FFCC22" width="95" height="30"><span>#FFCC22</span></td>
+                                <td bgcolor="#FFBB00" width="95" height="30">#FFBB00</td>
+                                <td bgcolor="#DDAA00" width="95" height="30">#DDAA00</td>
+                                <td bgcolor="#AA7700" width="95" height="30">#AA7700</td>
+                                <td bgcolor="#886600" width="95" height="30">#886600</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#FFFFBB" width="95" height="30"><span>#FFFFBB</span></td>
+                                <td bgcolor="#FFFF77" width="95" height="30"><span>#FFFF77</span></td>
+                                <td bgcolor="#FFFF33" width="95" height="30"><span>#FFFF33</span></td>
+                                <td bgcolor="#FFFF00" width="95" height="30"><span>#FFFF00</span></td>
+                                <td bgcolor="#EEEE00" width="95" height="30"><span>#EEEE00</span></td>
+                                <td bgcolor="#BBBB00" width="95" height="30">#BBBB00</td>
+                                <td bgcolor="#888800" width="95" height="30">#888800</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#EEFFBB" width="95" height="30"><span>#EEFFBB</span></td>
+                                <td bgcolor="#DDFF77" width="95" height="30"><span>#DDFF77</span></td>
+                                <td bgcolor="#CCFF33" width="95" height="30"><span>#CCFF33</span></td>
+                                <td bgcolor="#BBFF00" width="95" height="30"><span>#BBFF00</span></td>
+                                <td bgcolor="#99DD00" width="95" height="30"><span>#99DD00</span></td>
+                                <td bgcolor="#88AA00" width="95" height="30">#88AA00</td>
+                                <td bgcolor="#668800" width="95" height="30">#668800</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#CCFF99" width="95" height="30"><span>#CCFF99</span></td>
+                                <td bgcolor="#BBFF66" width="95" height="30"><span>#BBFF66</span></td>
+                                <td bgcolor="#99FF33" width="95" height="30"><span>#99FF33</span></td>
+                                <td bgcolor="#77FF00" width="95" height="30"><span>#77FF00</span></td>
+                                <td bgcolor="#66DD00" width="95" height="30"><span>#66DD00</span></td>
+                                <td bgcolor="#55AA00" width="95" height="30">#55AA00</td>
+                                <td bgcolor="#227700" width="95" height="30">#227700</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#99FF99" width="95" height="30"><span>#99FF99</span></td>
+                                <td bgcolor="#66FF66" width="95" height="30"><span>#66FF66</span></td>
+                                <td bgcolor="#33FF33" width="95" height="30"><span>#33FF33</span></td>
+                                <td bgcolor="#00FF00" width="95" height="30"><span>#00FF00</span></td>
+                                <td bgcolor="#00DD00" width="95" height="30"><span>#00DD00</span></td>
+                                <td bgcolor="#00AA00" width="95" height="30">#00AA00</td>
+                                <td bgcolor="#008800" width="95" height="30">#008800</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#BBFFEE" width="95" height="30"><span>#BBFFEE</span></td>
+                                <td bgcolor="#77FFCC" width="95" height="30"><span>#77FFCC</span></td>
+                                <td bgcolor="#33FFAA" width="95" height="30"><span>#33FFAA</span></td>
+                                <td bgcolor="#00FF99" width="95" height="30"><span>#00FF99</span></td>
+                                <td bgcolor="#00DD77" width="95" height="30"><span>#00DD77</span></td>
+                                <td bgcolor="#00AA55" width="95" height="30">#00AA55</td>
+                                <td bgcolor="#008844" width="95" height="30">#008844</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#AAFFEE" width="95" height="30"><span>#AAFFEE</span></td>
+                                <td bgcolor="#77FFEE" width="95" height="30"><span>#77FFEE</span></td>
+                                <td bgcolor="#33FFDD" width="95" height="30"><span>#33FFDD</span></td>
+                                <td bgcolor="#00FFCC" width="95" height="30"><span>#00FFCC</span></td>
+                                <td bgcolor="#00DDAA" width="95" height="30"><span>#00DDAA</span></td>
+                                <td bgcolor="#00AA88" width="95" height="30">#00AA88</td>
+                                <td bgcolor="#008866" width="95" height="30">#008866</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#99FFFF" width="95" height="30"><span>#99FFFF</span></td>
+                                <td bgcolor="#66FFFF" width="95" height="30"><span>#66FFFF</span></td>
+                                <td bgcolor="#33FFFF" width="95" height="30"><span>#33FFFF</span></td>
+                                <td bgcolor="#00FFFF" width="95" height="30"><span>#00FFFF</span></td>
+                                <td bgcolor="#00DDDD" width="95" height="30"><span>#00DDDD</span></td>
+                                <td bgcolor="#00AAAA" width="95" height="30">#00AAAA</td>
+                                <td bgcolor="#008888" width="95" height="30">#008888</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#CCEEFF" width="95" height="30"><span>#CCEEFF</span></td>
+                                <td bgcolor="#77DDFF" width="95" height="30"><span>#77DDFF</span></td>
+                                <td bgcolor="#33CCFF" width="95" height="30"><span>#33CCFF</span></td>
+                                <td bgcolor="#00BBFF" width="95" height="30"><span>#00BBFF</span></td>
+                                <td bgcolor="#009FCC" width="95" height="30">#009FCC</td>
+                                <td bgcolor="#0088A8" width="95" height="30">#0088A8</td>
+                                <td bgcolor="#007799" width="95" height="30">#007799</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#CCDDFF" width="95" height="30"><span>#CCDDFF</span></td>
+                                <td bgcolor="#99BBFF" width="95" height="30"><span>#99BBFF</span></td>
+                                <td bgcolor="#5599FF" width="95" height="30"><span>#5599FF</span></td>
+                                <td bgcolor="#0066FF" width="95" height="30">#0066FF</td>
+                                <td bgcolor="#0044BB" width="95" height="30">#0044BB</td>
+                                <td bgcolor="#003C9D" width="95" height="30">#003C9D</td>
+                                <td bgcolor="#003377" width="95" height="30">#003377</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#CCCCFF" width="95" height="30"><span>#CCCCFF</span></td>
+                                <td bgcolor="#9999FF" width="95" height="30"><span>#9999FF</span></td>
+                                <td bgcolor="#5555FF" width="95" height="30">#5555FF</td>
+                                <td bgcolor="#0000FF" width="95" height="30">#0000FF</td>
+                                <td bgcolor="#0000CC" width="95" height="30">#0000CC</td>
+                                <td bgcolor="#0000AA" width="95" height="30">#0000AA</td>
+                                <td bgcolor="#000088" width="95" height="30">#000088</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#CCBBFF" width="95" height="30"><span>#CCBBFF</span></td>
+                                <td bgcolor="#9F88FF" width="95" height="30"><span>#9F88FF</span></td>
+                                <td bgcolor="#7744FF" width="95" height="30">#7744FF</td>
+                                <td bgcolor="#5500FF" width="95" height="30">#5500FF</td>
+                                <td bgcolor="#4400CC" width="95" height="30">#4400CC</td>
+                                <td bgcolor="#2200AA" width="95" height="30">#2200AA</td>
+                                <td bgcolor="#220088" width="95" height="30">#220088</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#D1BBFF" width="95" height="30"><span>#D1BBFF</span></td>
+                                <td bgcolor="#B088FF" width="95" height="30"><span>#B088FF</span></td>
+                                <td bgcolor="#9955FF" width="95" height="30">#9955FF</td>
+                                <td bgcolor="#7700FF" width="95" height="30">#7700FF</td>
+                                <td bgcolor="#5500DD" width="95" height="30">#5500DD</td>
+                                <td bgcolor="#4400B3" width="95" height="30">#4400B3</td>
+                                <td bgcolor="#3A0088" width="95" height="30">#3A0088</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#E8CCFF" width="95" height="30"><span>#E8CCFF</span></td>
+                                <td bgcolor="#D28EFF" width="95" height="30"><span>#D28EFF</span></td>
+                                <td bgcolor="#B94FFF" width="95" height="30">#B94FFF</td>
+                                <td bgcolor="#9900FF" width="95" height="30">#9900FF</td>
+                                <td bgcolor="#7700BB" width="95" height="30">#7700BB</td>
+                                <td bgcolor="#66009D" width="95" height="30">#66009D</td>
+                                <td bgcolor="#550088" width="95" height="30">#550088</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#F0BBFF" width="95" height="30"><span>#F0BBFF</span></td>
+                                <td bgcolor="#E377FF" width="95" height="30"><span>#E38EFF</span></td>
+                                <td bgcolor="#D93EFF" width="95" height="30">#E93EFF</td>
+                                <td bgcolor="#CC00FF" width="95" height="30">#CC00FF</td>
+                                <td bgcolor="#A500CC" width="95" height="30">#A500CC</td>
+                                <td bgcolor="#7A0099" width="95" height="30">#7A0099</td>
+                                <td bgcolor="#660077" width="95" height="30">#660077</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#FFB3FF" width="95" height="30"><span>#FFB3FF</span></td>
+                                <td bgcolor="#FF77FF" width="95" height="30"><span>#FF77FF</span></td>
+                                <td bgcolor="#FF3EFF" width="95" height="30">#FF3EFF</td>
+                                <td bgcolor="#FF00FF" width="95" height="30">#FF00FF</td>
+                                <td bgcolor="#CC00CC" width="95" height="30">#CC00CC</td>
+                                <td bgcolor="#990099" width="95" height="30">#990099</td>
+                                <td bgcolor="#770077" width="95" height="30">#770077</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table border="0">
+                        <tbody>
+                            <tr>
+                                <th width="130">顏色名稱</th>
+                                <th width="80">代碼</th>
+                                <th width="80">
+                                    <p align="center">顏色</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td><span style="text-decoration: underline;">maroon</span></td>
+                                <td>#800000</td>
+                                <td bgcolor="#800000">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>darkred</td>
+                                <td>#8B0000</td>
+                                <td bgcolor="#8B0000">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>brown</td>
+                                <td>#A52A2A</td>
+                                <td bgcolor="#A52A2A">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span style="text-decoration: underline;">firebrick</span></td>
+                                <td>#B22222</td>
+                                <td bgcolor="#B22222">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>crimson</td>
+                                <td>#DC143C</td>
+                                <td bgcolor="#DC143C">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>red</td>
+                                <td>#FF0000</td>
+                                <td bgcolor="#FF0000">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><span style="text-decoration: underline;">桃紅~紛紅</span></p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th width="130">顏色名稱</th>
+                                <th width="80">代碼</th>
+                                <th width="80">
+                                    <p align="center">顏色</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>mediumvioletred</td>
+                                <td>#C71585</td>
+                                <td bgcolor="#C71585">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>palevioletred</td>
+                                <td>#D87093</td>
+                                <td bgcolor="#D87093">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span style="text-decoration: underline;">deeppink</span></td>
+                                <td>#FF1493</td>
+                                <td bgcolor="#FF1493">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>fuchsia(magenta)</td>
+                                <td>#FF00FF</td>
+                                <td bgcolor="#FF00FF">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>hotpink</td>
+                                <td>#FF69B4</td>
+                                <td bgcolor="#FF69B4">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>pink</td>
+                                <td><span style="text-decoration: underline;">#FFC0CB</span></td>
+                                <td bgcolor="#FFC0CB">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span style="text-decoration: underline;">lightpink</span></td>
+                                <td>#FFB6C1</td>
+                                <td bgcolor="#FFB6C1">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>mistyrose</td>
+                                <td>#FFE4E1</td>
+                                <td bgcolor="#FFE4E1">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>lavenderblush</td>
+                                <td>#FFF0F5</td>
+                                <td bgcolor="#FFF0F5">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><span style="text-decoration: underline;">紫<br /></span></p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th width="130">顏色名稱</th>
+                                <th width="80">代碼</th>
+                                <th width="80">
+                                    <p align="center">顏色</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>indigo</td>
+                                <td>#4B0082</td>
+                                <td bgcolor="#4B0082">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>purple</td>
+                                <td>#800080</td>
+                                <td bgcolor="#800080">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>darkmagenta</td>
+                                <td><span style="text-decoration: underline;">#8B008B</span></td>
+                                <td bgcolor="#8B008B">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span style="text-decoration: underline;">darkorchid</span></td>
+                                <td>#9932CC</td>
+                                <td bgcolor="#9932CC">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>blueviolet</td>
+                                <td>#8A2BE2</td>
+                                <td bgcolor="#8A2BE2">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>darkviolet</td>
+                                <td>#9400D3</td>
+                                <td bgcolor="#9400D3">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>slateblue</td>
+                                <td>#6A5ACD</td>
+                                <td bgcolor="#6A5ACD">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>mediumpurple</td>
+                                <td>#9370DB</td>
+                                <td bgcolor="#9370DB">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>mediumslateblue</td>
+                                <td><span style="text-decoration: underline;">#7B68EE</span></td>
+                                <td bgcolor="#7B68EE">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>mediumorchid</td>
+                                <td>#BA55D3</td>
+                                <td bgcolor="#BA55D3">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span style="text-decoration: underline;">violet</span></td>
+                                <td>#EE82EE</td>
+                                <td bgcolor="#EE82EE">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>plum</td>
+                                <td>#DDA0DD</td>
+                                <td bgcolor="#DDA0DD">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>thistle</td>
+                                <td><span style="text-decoration: underline;">#D8BFD8</span></td>
+                                <td bgcolor="#D8BFD8">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>lavender</td>
+                                <td>#E6E6FA</td>
+                                <td bgcolor="#E6E6FA">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><span style="text-decoration: underline;">褐~橘~米白<br /></span></p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th width="130">顏色名稱</th>
+                                <th width="80">代碼</th>
+                                <th width="80">
+                                    <p align="center">顏色</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>saddlebrown</td>
+                                <td>#8B4513</td>
+                                <td bgcolor="#8B4513">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>sienna</td>
+                                <td><span style="text-decoration: underline;">#A0522D</span></td>
+                                <td bgcolor="#A0522D">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>chocolate</td>
+                                <td>#D2691E</td>
+                                <td bgcolor="#D2691E">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>indianred</td>
+                                <td>#CD5C5C</td>
+                                <td bgcolor="#CD5C5C">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>rosybrown</td>
+                                <td>#BC8F8F</td>
+                                <td bgcolor="#BC8F8F">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span style="text-decoration: underline;">lightcorol</span></td>
+                                <td><span style="text-decoration: underline;">#F08080</span></td>
+                                <td bgcolor="#F08080">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>salmon</td>
+                                <td>#FA8072</td>
+                                <td bgcolor="#FA8072">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>lightsalmon</td>
+                                <td>#FFA07A</td>
+                                <td bgcolor="#FFA07A">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>orangered</td>
+                                <td>#FF4500</td>
+                                <td bgcolor="#FF4500">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>tomato</td>
+                                <td><span style="text-decoration: underline;">#FF6347</span></td>
+                                <td bgcolor="#FF6347">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>coral</td>
+                                <td>#FF7F50</td>
+                                <td bgcolor="#FF7F50">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>darkorange</td>
+                                <td>#FF8C00</td>
+                                <td bgcolor="#FF8C00">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>sandybrown</td>
+                                <td>#F4A460</td>
+                                <td bgcolor="#F4A460">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>peru</td>
+                                <td>#CD853F</td>
+                                <td bgcolor="#CD853F">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>tan</td>
+                                <td>#D2B48C</td>
+                                <td bgcolor="#D2B48C">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>burlywood</td>
+                                <td>#DEB887</td>
+                                <td bgcolor="#DEB887">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>wheat</td>
+                                <td><span style="text-decoration: underline;">#F5DEB3</span></td>
+                                <td bgcolor="#F5DEB3">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>moccasin</td>
+                                <td>#FFE4B5</td>
+                                <td bgcolor="#FFE4B5">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>navajowhite</td>
+                                <td>#FFDEAD</td>
+                                <td bgcolor="#FFDEAD">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>peachpuff</td>
+                                <td>#FFDAB9</td>
+                                <td bgcolor="#FFDAB9">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span style="text-decoration: underline;">bisque</span></td>
+                                <td>#FFE4C4</td>
+                                <td bgcolor="#FFE4C4">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>antuquewhite</td>
+                                <td>#FAEBD7</td>
+                                <td bgcolor="#FAEBD7">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>papayawhip</td>
+                                <td>#FFEFD5</td>
+                                <td bgcolor="#FFEFD5">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>cornsilk</td>
+                                <td><span style="text-decoration: underline;">#FFF8DC</span></td>
+                                <td bgcolor="#FFF8DC">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>oldlace</td>
+                                <td>#FDF5E6</td>
+                                <td bgcolor="#FDF5E6">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>linen</td>
+                                <td>#FAF0E6</td>
+                                <td bgcolor="#FAF0E6">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>seashell</td>
+                                <td>#FFF5EE</td>
+                                <td bgcolor="#FFF5EE">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span style="text-decoration: underline;">snow</span></td>
+                                <td>#FFFAFA</td>
+                                <td bgcolor="#FFFAFA">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>floralwhite</td>
+                                <td>#FFFAF0</td>
+                                <td bgcolor="#FFFAF0">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>ivory</td>
+                                <td><span style="text-decoration: underline;">#FFFFF0</span></td>
+                                <td bgcolor="#FFFFF0">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>mintcream</td>
+                                <td>#F5FFFA</td>
+                                <td bgcolor="#F5FFFA">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><span style="text-decoration: underline;">金~黃<br /></span></p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th width="130">顏色名稱</th>
+                                <th width="80">代碼</th>
+                                <th width="80">
+                                    <p align="center">顏色</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>darkgoldenrod</td>
+                                <td>#B8860B</td>
+                                <td bgcolor="#B8860B">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>goldenrod</td>
+                                <td>#DAA520</td>
+                                <td bgcolor="#DAA520">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span style="text-decoration: underline;">gold</span></td>
+                                <td>#FFD700</td>
+                                <td bgcolor="#FFD700">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>yellow</td>
+                                <td>#FFFF00</td>
+                                <td bgcolor="#FFFF00">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>darkkhaki</td>
+                                <td>#BDB76B</td>
+                                <td bgcolor="#BDB76B">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>khaki</td>
+                                <td>#F0E68C</td>
+                                <td bgcolor="#F0E68C">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>palegoldenrod</td>
+                                <td><span style="text-decoration: underline;">#EEE8AA</span></td>
+                                <td bgcolor="#EEE8AA">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>beige</td>
+                                <td>#F5F5DC</td>
+                                <td bgcolor="#F5F5DC">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>lemonchiffon</td>
+                                <td>#FFFACD</td>
+                                <td bgcolor="#FFFACD">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>lightgoldenrodyellow</td>
+                                <td>#FAFAD2</td>
+                                <td bgcolor="#FAFAD2">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span style="text-decoration: underline;">lightyellow</span></td>
+                                <td>#FFFFE0</td>
+                                <td bgcolor="#FFFFE0">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><span style="text-decoration: underline;">~黃<br /></span></p>
+                    <p><span style="text-decoration: underline;">綠</span></p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th width="130">顏色名稱</th>
+                                <th width="80">代碼</th>
+                                <th width="80">
+                                    <p align="center">顏色</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>darkslategray</td>
+                                <td>#2F4F4F</td>
+                                <td bgcolor="#2F4F4F">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>darkolivegreen</td>
+                                <td>#556B2F</td>
+                                <td bgcolor="#556B2F">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span style="text-decoration: underline;">olive</span></td>
+                                <td>#808000</td>
+                                <td bgcolor="#808000">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>darkgreen</td>
+                                <td>#006400</td>
+                                <td bgcolor="#006400">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>forestgreen</td>
+                                <td>#228B22</td>
+                                <td bgcolor="#228B22">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>seagreen</td>
+                                <td><span style="text-decoration: underline;">#2E8B57</span></td>
+                                <td bgcolor="#2E8B57">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>green(teal)</td>
+                                <td>#008080</td>
+                                <td bgcolor="#008080">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>lightseagreen</td>
+                                <td>#20B2AA</td>
+                                <td bgcolor="#20B2AA">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>madiumaquamarine</td>
+                                <td>#66CDAA</td>
+                                <td bgcolor="#66CDAA">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>mediumseagreen</td>
+                                <td>#3CB371</td>
+                                <td bgcolor="#3CB371">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>darkseagreen</td>
+                                <td>#8FBC8F</td>
+                                <td bgcolor="#8FBC8F">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span style="text-decoration: underline;">yellowgreen</span></td>
+                                <td>#9ACD32</td>
+                                <td bgcolor="#9ACD32">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>limegreen</td>
+                                <td>#32CD32</td>
+                                <td bgcolor="#32CD32">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>lime</td>
+                                <td>#00FF00</td>
+                                <td bgcolor="#00FF00">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>chartreuse</td>
+                                <td>#7FFF00</td>
+                                <td bgcolor="#7FFF00">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>lawngreen</td>
+                                <td>#7CFC00</td>
+                                <td bgcolor="#7CFC00">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>greenyellow</td>
+                                <td><span style="text-decoration: underline;">#ADFF2F</span></td>
+                                <td bgcolor="#ADFF2F">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>mediumspringgreen</td>
+                                <td>#00FA9A</td>
+                                <td bgcolor="#00FA9A">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>springgreen</td>
+                                <td>#00FF7F</td>
+                                <td bgcolor="#00FF7F">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span style="text-decoration: underline;">lightgreen</span></td>
+                                <td>#90EE90</td>
+                                <td bgcolor="#90EE90">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>palegreen</td>
+                                <td>#98F898</td>
+                                <td bgcolor="#98F898">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>aquamarine</td>
+                                <td>#7FFFD4</td>
+                                <td bgcolor="#7FFFD4">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>honeydew</td>
+                                <td>#F0FFF0</td>
+                                <td bgcolor="#F0FFF0">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><span style="text-decoration: underline;">藍</span></p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th width="130">顏色名稱</th>
+                                <th width="80">代碼</th>
+                                <th width="80">
+                                    <p align="center">顏色</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>midnightblue</td>
+                                <td>#191970</td>
+                                <td bgcolor="#191970">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>navy</td>
+                                <td>#000080</td>
+                                <td bgcolor="#000080">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>darkblue</td>
+                                <td><span style="text-decoration: underline;">#00008B</span></td>
+                                <td bgcolor="#00008B">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>darkslateblue</td>
+                                <td>#483D8B</td>
+                                <td bgcolor="#483D8B">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>mediumblue</td>
+                                <td>#0000CD</td>
+                                <td bgcolor="#0000CD">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>royalblue</td>
+                                <td>#4169E1</td>
+                                <td bgcolor="#4169E1">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>dodgerblue</td>
+                                <td>#1E90FF</td>
+                                <td bgcolor="#1E90FF">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span style="text-decoration: underline;">cornflowerblue</span></td>
+                                <td>#6495ED</td>
+                                <td bgcolor="#6495ED">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>deepskyblue</td>
+                                <td>#00BFFF</td>
+                                <td bgcolor="#00BFFF">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>lightskyblue</td>
+                                <td>#87CEFA</td>
+                                <td bgcolor="#87CEFA">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>lightsteelblue</td>
+                                <td>#B0C4DE</td>
+                                <td bgcolor="#B0C4DE">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>lightblue</td>
+                                <td>#ADD8E6</td>
+                                <td bgcolor="#ADD8E6">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>steelblue</td>
+                                <td><span style="text-decoration: underline;">#4682B4</span></td>
+                                <td bgcolor="#4682B4">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>darkcyan</td>
+                                <td>#008B8B</td>
+                                <td bgcolor="#008B8B">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>cadetblue</td>
+                                <td>#5F9EA0</td>
+                                <td bgcolor="#5F9EA0">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>darkturquoise</td>
+                                <td>#00CED1</td>
+                                <td bgcolor="#00CED1">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>mediumturquoise</td>
+                                <td>#48D1CC</td>
+                                <td bgcolor="#48D1CC">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span style="text-decoration: underline;">turquoise</span></td>
+                                <td>#40E0D0</td>
+                                <td bgcolor="#40E0D0">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>skyblue</td>
+                                <td>#87CECB</td>
+                                <td bgcolor="#87CECB">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>powderblue</td>
+                                <td>#B0E0E6</td>
+                                <td bgcolor="#B0E0E6">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>paleturquoise</td>
+                                <td>#AFEEEE</td>
+                                <td bgcolor="#AFEEEE">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>lightcyan</td>
+                                <td><span style="text-decoration: underline;">#E0FFFF</span></td>
+                                <td bgcolor="#E0FFFF">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>azure</td>
+                                <td>#F0FFFF</td>
+                                <td bgcolor="#F0FFFF">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>aliceblue</td>
+                                <td>#F0F8FF</td>
+                                <td bgcolor="#F0F8FF">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>aqua(cyan)</td>
+                                <td>#00FFFF</td>
+                                <td bgcolor="#00FFFF">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><span style="text-decoration: underline;">黑~灰~白</span></p>
+                    <p>&nbsp;</p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th width="130">顏色名稱</th>
+                                <th width="80">代碼</th>
+                                <th width="80">
+                                    <p align="center">顏色</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>black</td>
+                                <td>#000000</td>
+                                <td bgcolor="#000000">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>dimgray</td>
+                                <td>#696969</td>
+                                <td bgcolor="#696969">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span style="text-decoration: underline;">gray</span></td>
+                                <td>#808080</td>
+                                <td bgcolor="#808080">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>slategray</td>
+                                <td>#708090</td>
+                                <td bgcolor="#708090">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>lightslategray</td>
+                                <td>#778899</td>
+                                <td bgcolor="#778899">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>darkgray</td>
+                                <td>#A9A9A9</td>
+                                <td bgcolor="#A9A9A9">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>silver</td>
+                                <td><span style="text-decoration: underline;">#C0C0C0</span></td>
+                                <td bgcolor="#C0C0C0">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>lightgray</td>
+                                <td>#D3D3D3</td>
+                                <td bgcolor="#D3D3D3">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>gainsboro</td>
+                                <td>#DCDCDC</td>
+                                <td bgcolor="#DCDCDC">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span style="text-decoration: underline;">whitesmoke</span></td>
+                                <td>#F5F5F5</td>
+                                <td bgcolor="#F5F5F5">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>ghostwhite</td>
+                                <td>#F8F8FF</td>
+                                <td bgcolor="#F8F8FF">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>white</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
