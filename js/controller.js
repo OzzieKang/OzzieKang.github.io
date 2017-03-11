@@ -12,6 +12,20 @@
     };
 });
 
+ozApp.factory('TipsCount', function () {
+
+    var data = $("section div div div a").length;
+
+    return {
+        getData: function () {
+            return data;
+        },
+        setData: function () {
+            data = $("section div div div a").length;
+        }
+    };
+});
+
 ozApp.factory('listID', function () {
 
     var data = {};
@@ -26,14 +40,20 @@ ozApp.factory('listID', function () {
     };
 });
 
-ozApp.controller("homeCtrl", ['$scope', function ($scope) {
+ozApp.controller("homeCtrl", 'TipsCount', ['$scope', function ($scope, TipsCount) {
     $scope.indexpages = [
         { path: "/programing", name: "Programing" },
         { path: "/articles", name: "Articles" },
         { path: "/tips", name: "Tips" }
     ];
-    $scope.tipsCount = $("section div div div a").length;
+    $scope.tipsCount =TipsCount.getData();
 }]);
+
+ozApp.controller("TipsCtrl", 'TipsCount', ['$scope', function ($scope, TipsCount) {
+    TipsCount.setData();
+    //$scope.tipsCount = TipsCount.getData();
+}]);
+
 
 ozApp.controller("ListController", ['$scope', '$routeParams', '$http', 'NgTableParams', 'ozAppData', 'listID', function ($scope, $routeParams, $http, NgTableParams, ozAppData, listID) {
     listID.setData($routeParams.teamID);
