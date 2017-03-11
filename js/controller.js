@@ -13,14 +13,14 @@
 });
 
 ozApp.factory('TipsCount', ['$http', function ($http) {
-    var data = $("section div div div a").length;
+    var data = {};
 
     return {
         getData: function () {
-            return data;
+            return data.length;
         },
-        setData: function () {
-            data = $("section div div div a").length;
+        setData: function (value) {
+            data =value ;
         }
     };
 }]);
@@ -55,7 +55,7 @@ ozApp.controller("homeCtrl", ['$scope', '$routeParams', 'TipsCount', function ($
 }]);
 
 ozApp.controller("TipsCtrl", ['$scope', '$routeParams', 'TipsCount', function ($scope, $routeParams, TipsCount) {
-    $scope.tipsCount = TipsCount.getData();
+    $scope.tipsCount = $("section div div div a").length;
     $scope.$watch('tipsCount', function (newValue, oldValue) {
         if (newValue !== oldValue) TipsCount.setData();
     });
