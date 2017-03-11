@@ -40,7 +40,7 @@ ozApp.factory('listID', function () {
     };
 });
 
-ozApp.controller("homeCtrl", 'TipsCount', ['$scope', function ($scope, TipsCount) {
+ozApp.controller("homeCtrl", ['$scope', '$routeParams', 'TipsCount', function ($scope, $routeParams, TipsCount) {
     $scope.indexpages = [
         { path: "/programing", name: "Programing" },
         { path: "/articles", name: "Articles" },
@@ -49,7 +49,7 @@ ozApp.controller("homeCtrl", 'TipsCount', ['$scope', function ($scope, TipsCount
     $scope.tipsCount =TipsCount.getData();
 }]);
 
-ozApp.controller("TipsCtrl", 'TipsCount', ['$scope', function ($scope, TipsCount) {
+ozApp.controller("TipsCtrl", ['$scope', '$routeParams','TipsCount', function ($scope,$routeParams, TipsCount) {
     TipsCount.setData();
     //$scope.tipsCount = TipsCount.getData();
 }]);
