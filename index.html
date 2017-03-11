@@ -17,7 +17,7 @@
     <link href="css/normalize.css" rel="stylesheet" />
     <link rel="shortcut icon" href="img/Jack-JackParr.png" />
 </head>
-<body ng-controller="homeCtrl">
+<body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -33,7 +33,7 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav" ng-controller="homeCtrl">
                     <li ng-repeat="indexpage in indexpages"><a href="{{indexpage.path}}">{{indexpage.name}}</a></li>
                 </ul>
 
