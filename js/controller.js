@@ -40,8 +40,8 @@ ozApp.controller("homeCtrl", ['$scope', '$routeParams', 'RecordCount', function 
 
     $scope.indexpages = [
         { path: "#!/programing", name: "Programing" ,count: 0},
-        { path: "#!/articles", name: "Articles", count:TipsCount },
-        { path: "#!/tips", name: "Tips", count: TipsCount }
+        { path: "#!/articles", name: "Articles", count:0 },
+        { path: "#!/tips", name: "Tips", count: RecordCount.TipsCount }
     ];
 
 }]);
