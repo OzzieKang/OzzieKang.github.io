@@ -47,7 +47,7 @@ ozApp.controller("homeCtrl", ['$scope', '$routeParams', 'TipsCount', function ($
     ];
     
     $scope.$watch(function () {
-        return TipsCount.getData();
+        $scope.tipsCount= TipsCount.getData();
     },
         function (newValue, oldValue) {
             if (newValue !== oldValue) $scope.tipsCount = newValue;
