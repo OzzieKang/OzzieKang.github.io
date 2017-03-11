@@ -12,7 +12,7 @@
                 <div class="panel-body">
                     <table class="table">
                         <tr ng-repeat="row in Colors">
-                            <td ng-repeat="i in [0,1,2,3,4,5,6]">{{row[i]}}</td>
+                            <td bgcolor="{{col}}" width="95" height="30" ng-repeat="col in row">{{col}}</td>
                         </tr>
                     </table>
                 </div>
