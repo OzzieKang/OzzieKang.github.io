@@ -12,8 +12,7 @@
     };
 });
 
-ozApp.factory('TipsCount', function () {
-
+ozApp.factory('TipsCount', ['$http', function ($http) {
     var data = $("section div div div a").length;
 
     return {
@@ -24,7 +23,7 @@ ozApp.factory('TipsCount', function () {
             data = $("section div div div a").length;
         }
     };
-});
+}]);
 
 ozApp.factory('listID', function () {
 
@@ -46,11 +45,20 @@ ozApp.controller("homeCtrl", ['$scope', '$routeParams', 'TipsCount', function ($
         { path: "/articles", name: "Articles" },
         { path: "/tips", name: "Tips" }
     ];
-    $scope.tipsCount =TipsCount.getData();
+    
+    $scope, $watch(function () {
+        return TipsCount.getData();
+    },
+        function (newValue, oldValue) {
+            if (newValue !== oldValue) $scope.tipsCount = newValue;
+    });
 }]);
 
-ozApp.controller("TipsCtrl", ['$scope', '$routeParams','TipsCount', function ($scope,$routeParams, TipsCount) {
-    TipsCount.setData();
+ozApp.controller("TipsCtrl", ['$scope', '$routeParams', 'TipsCount', function ($scope, $routeParams, TipsCount) {
+    $scope.tipsCount = TipsCount.getData();
+    $scope, $watch('tipsCount', function (newValue, oldValue) {
+        if (newValue !== oldValue) TipsCount.setData();
+    });
     //$scope.tipsCount = TipsCount.getData();
 }]);
 
