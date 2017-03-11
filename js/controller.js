@@ -32,6 +32,7 @@ ozApp.controller("homeCtrl", ['$scope', function ($scope) {
         { path: "/articles", name: "Articles" },
         { path: "/tips", name: "Tips" }
     ];
+    $scope.tipsCount = $('section').length;
 }]);
 
 ozApp.controller("ListController", ['$scope', '$routeParams', '$http', 'NgTableParams', 'ozAppData', 'listID', function ($scope, $routeParams, $http, NgTableParams, ozAppData, listID) {

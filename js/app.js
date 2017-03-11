@@ -1,10 +1,7 @@
 ﻿var ozApp = angular.module('ozApp', ['ngRoute']);
 
 ozApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-    $routeProvider.when('/', {
-        templateUrl: '/index.html',
-        controller: 'homeCtrl'
-    }).when('/home', {
+    $routeProvider.when('/home', {
         templateUrl: '/partials/home.html'
     }).when('/articles', {
         templateUrl: '/partials/articles.html'
