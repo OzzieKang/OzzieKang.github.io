@@ -1,7 +1,14 @@
 body {
   padding-top: 70px;
 }
-.starter-template {
-  padding: 40px 15px;
-  /*text-align: center;*/
+/* footer */
+#footer {
+	background:#444444;
+	padding: 20px 0 5px;
 }
+
+p.copyright {
+	color: #fff;
+	text-align: center;
+}
+
