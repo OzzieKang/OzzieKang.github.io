@@ -1,6 +1,6 @@
 ﻿var ozApp = angular.module('ozApp', ['ngRoute']);
 
-ozApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+ozApp.config(['$routeProvider',  function ($routeProvider) {
     $routeProvider.when('/home', {
         templateUrl: '/partials/home.html'
     }).when('/articles', {
@@ -15,7 +15,7 @@ ozApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $
     });
 
     // use the HTML5 History API
-    $locationProvider.html5Mode({
-        enabled: true
-    });
+    //$locationProvider.html5Mode({
+    //    enabled: true
+    //});
 }]);
