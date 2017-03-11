@@ -2,7 +2,7 @@
 
 ozApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider.when('/article', {
-        templateUrl: 'particals/articles.html'
+        templateUrl: '/particals/articles.html'
     }).otherwise({
         redirectTo: '/article'
     });
