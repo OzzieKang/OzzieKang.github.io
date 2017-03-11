@@ -13,10 +13,10 @@ ozApp.factory('ozAppData', function () {
     };
 });
 
-ozApp.factory('TipsCount',  function () {
+ozApp.factory('RecordCount',  function () {
 
     return {
-        count: 0
+        TipsCount: 0
     };
 });
 
@@ -34,19 +34,21 @@ ozApp.factory('listID', function () {
     };
 });
 
-ozApp.controller("homeCtrl", ['$scope', '$routeParams', 'TipsCount', function ($scope, $routeParams, TipsCount) {
+ozApp.controller("homeCtrl", ['$scope', '$routeParams', 'RecordCount', function ($scope, $routeParams, RecordCount) {
+    $scope.RecordCount = RecordCount;
+    RecordCount.TipsCount = $("section div div div a").length;
+
     $scope.indexpages = [
-        { path: "#!/programing", name: "Programing" },
-        { path: "#!/articles", name: "Articles" },
-        { path: "#!/tips", name: "Tips" }
+        { path: "#!/programing", name: "Programing" ,count: 0},
+        { path: "#!/articles", name: "Articles", count:TipsCount },
+        { path: "#!/tips", name: "Tips", count: TipsCount }
     ];
-    $scope.TipsCount = TipsCount;
-    TipsCount.count = $("section div div div a").length;
+
 }]);
 
-ozApp.controller("TipsCtrl", ['$scope', '$routeParams', 'TipsCount', function ($scope, $routeParams, TipsCount) {
-    $scope.TipsCount = TipsCount;
-    TipsCount.count = $("section div div div a").length;
+ozApp.controller("TipsCtrl", ['$scope', '$routeParams', 'RecordCount', function ($scope, $routeParams, RecordCount) {
+    $scope.RecordCount = RecordCount;
+    RecordCount.TipsCount = $("section div div div a").length;
     //$scope.tipsCount = TipsCount.getData();
 }]);
 
