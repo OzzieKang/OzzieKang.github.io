@@ -8,7 +8,8 @@ ozApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $
     }).when('/programing', {
         templateUrl: '/partials/programing.html'
     }).when('/tips', {
-        templateUrl: '/partials/tips.html'
+        templateUrl: '/partials/tips.html',
+        controller: 'TipsCtrl'
     }).otherwise({
         redirectTo: '/'
     });
