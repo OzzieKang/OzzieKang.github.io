@@ -42,7 +42,7 @@ ozApp.controller("homeCtrl", ['$scope','$http', '$routeParams', 'RecordCount', f
     RecordCount.ArticlesCount = $("section div div div a").length;
     RecordCount.TipsCount = $("section div div div a").length;
 
-    $http.get("/data/color.json").success(function (response) {
+    $http.get("/data/color.json").then(function (response) {
         $scope.Colors = response;
     });
     
