@@ -36,12 +36,16 @@ ozApp.factory('listID', function () {
     };
 });
 
-ozApp.controller("homeCtrl", ['$scope', '$routeParams', 'RecordCount', function ($scope, $routeParams, RecordCount) {
+ozApp.controller("homeCtrl", ['$scope','$http', '$routeParams', 'RecordCount', function ($scope,$http, $routeParams, RecordCount) {
     $scope.RecordCount = RecordCount;
     RecordCount.ProgramingCount = $("section div div div a").length;
     RecordCount.ArticlesCount = $("section div div div a").length;
     RecordCount.TipsCount = $("section div div div a").length;
 
+    $http.get("/data/color.json").success(function (response) {
+        $scope.Colors = response;
+    });
+    
 }]);
 
 ozApp.controller("ProgramCtrl", ['$scope', '$routeParams', 'RecordCount', function ($scope, $routeParams, RecordCount) {
