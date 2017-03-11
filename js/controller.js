@@ -1,4 +1,6 @@
-﻿ozApp.factory('ozAppData', function () {
+﻿var blogcount = 0;
+
+ozApp.factory('ozAppData', function () {
 
     var data = {};
 
@@ -17,7 +19,7 @@ ozApp.factory('TipsCount', ['$http', function ($http) {
 
     return {
         getData: function () {
-            return data.length;
+            return data;
         },
         setData: function (value) {
             data =value ;
@@ -46,19 +48,13 @@ ozApp.controller("homeCtrl", ['$scope', '$routeParams', 'TipsCount', function ($
         { path: "/tips", name: "Tips" }
     ];
     
-    $scope.$watch(function () {
-        $scope.tipsCount= TipsCount.getData();
-    },
-        function (newValue, oldValue) {
-            if (newValue !== oldValue) $scope.tipsCount = newValue;
-    });
+    $scope.tipsCount = blogcount;
 }]);
 
 ozApp.controller("TipsCtrl", ['$scope', '$routeParams', 'TipsCount', function ($scope, $routeParams, TipsCount) {
     $scope.tipsCount = $("section div div div a").length;
-    $scope.$watch('tipsCount', function (newValue, oldValue) {
-        if (newValue !== oldValue) TipsCount.setData();
-    });
+    blogcount=$scope.tipsCount;
+
     //$scope.tipsCount = TipsCount.getData();
 }]);
 
