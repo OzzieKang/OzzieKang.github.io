@@ -56,6 +56,7 @@ ozApp.controller("homeCtrl", ['$scope', '$http', 'RecordCount', function ($scope
 ozApp.controller("ProgramCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', function ($scope, $http, $routeParams, RecordCount) {
     $scope.RecordCount = RecordCount;
     RecordCount.ProgramingCount = $("section div div div").filter(".panel-heading").length;
+    $scope.templates =    { name: 'htmlcsscolor.html', url: '/html/htmlcsscolor.html' };
 }]);
 
 ozApp.controller("ArticalCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', function ($scope, $http, $routeParams, RecordCount) {
