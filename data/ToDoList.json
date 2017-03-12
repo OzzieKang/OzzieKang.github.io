@@ -3,7 +3,7 @@
     "headID": "headingOne",
     "collapseID": "collapseOne",
     "title": "读书",
-    "tableHeader": ["Book Name","Start Date","Finished Date"],
+    "tableHeader": ["Book Name","Start Date","Finished Date","Process"],
     "items": [
       {
         "name": "O'Reilly - Learning AngularJS",
