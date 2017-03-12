@@ -41,7 +41,7 @@ ozApp.factory('listID', function () {
     };
 });
 
-ozApp.controller("homeCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', function ($scope,$http, $routeParams, RecordCount) {
+ozApp.controller("homeCtrl", ['$scope', '$http',  'RecordCount', function ($scope,$http, RecordCount) {
     //$scope.RecordCount = RecordCount;
     //RecordCount.ProgramingCount = $("section div div div").filter(".panel-heading").length;
     //RecordCount.ArticlesCount = $("section div div div").filter(".panel-heading").length;

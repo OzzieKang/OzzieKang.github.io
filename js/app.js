@@ -16,8 +16,7 @@ ozApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $
         templateUrl: '/partials/tips.html',
         controller: 'TipsCtrl'
     }).otherwise({
-        redirectTo: '/',
-        controller: 'homeCtrl'
+        redirectTo: '/'
     });
 
     // use the HTML5 History API
