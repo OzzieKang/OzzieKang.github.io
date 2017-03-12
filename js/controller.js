@@ -13,15 +13,15 @@ ozApp.factory('ozAppData', function () {
     };
 });
 
-ozApp.factory('RecordCount', ['$http', function ($http) {
+ozApp.factory('RecordCount', function () {
 
     return {
         ProgramingCount: 0,
-        ArticlesCount:0,
+        ArticlesCount: 0,
         TipsCount: 0,
-        ToDoCount:0
+        ToDoCount: 0
     };
-}]);
+});
 
 ozApp.factory('listID', function () {
 
@@ -68,14 +68,14 @@ ozApp.controller("ArticalCtrl", ['$scope', '$http', '$routeParams', 'RecordCount
 
 ozApp.controller("TipsCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', function ($scope, $http, $routeParams, RecordCount) {
     $scope.RecordCount = RecordCount;
-    var itemCount=$("section div div div").filter(".panel-heading").length;
+    var itemCount = $("section div div div").filter(".panel-heading").length;
     if (RecordCount.TipsCount != itemCount) {
-        RecordCount.TipsCout = itemCount;
+        RecordCount.TipsCount = itemCount;
         $http.post("/data/BlogCount.json", $scope.languages).then(function (data) {
             $scope.msg = "Data saved";
         });
     } else {
-        RecordCount.TipsCout = RecordCount.TipsCout;
+        RecordCount.TipsCount = RecordCount.TipsCount;
     }
     //$scope.tipsCount = TipsCount.getData();
 }]);
