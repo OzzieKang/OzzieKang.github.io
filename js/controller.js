@@ -58,10 +58,6 @@ ozApp.controller("homeCtrl", ['$scope', '$http', 'RecordCount', function ($scope
 ozApp.controller("ProgramCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', function ($scope, $http, $routeParams, RecordCount) {
     $scope.RecordCount = RecordCount;
     RecordCount.ProgramingCount = $("section div div div").filter(".panel-heading").length;
-
-    $http.get("/data/color.json").then(function (response) {
-        $scope.Colors = response.data.colors;
-    });
 }]);
 
 ozApp.controller("ArticalCtrl", ['$scope', '$routeParams', 'RecordCount', function ($scope, $routeParams, RecordCount) {
@@ -78,7 +74,7 @@ ozApp.controller("TipsCtrl", ['$scope', '$routeParams', 'RecordCount', function 
 
 ozApp.controller("ToDoCtrl", ['$scope', '$routeParams', 'RecordCount', function ($scope, $routeParams, RecordCount) {
     $scope.RecordCount = RecordCount;
-    RecordCount.TipsCount = $("section div div div").filter(".panel-heading").length;
+    RecordCount.ToDoListCount = $("section div div div").filter(".panel-heading").length;
     //$scope.tipsCount = TipsCount.getData();
 }]);
 
