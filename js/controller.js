@@ -71,7 +71,7 @@ ozApp.controller("TipsCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', 
     var itemCount = $("section div div div").filter(".panel-heading").length;
     if (RecordCount.TipsCount != itemCount) {
         RecordCount.TipsCount = itemCount;
-        $http.post("/data/BlogCountss", RecordCount).then(function (data) {
+        $http.post('/data/BlogCount.json', RecordCount).then(function (data) {
             $scope.msg = "Data saved";
         });
     } else {
