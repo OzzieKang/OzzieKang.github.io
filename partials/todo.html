@@ -4,7 +4,7 @@
             <div class="panel-heading" role="tab" id="{{todo.headID}}">
                 <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#{{todo.collapseID}}" target="_self" aria-expanded="false" aria-controls="{{todo.collapseID}}">
-                        {{todo.title}}
+                        {{todo.title}}<span class="badge">{{todo.items.length}}</span>
                     </a>
                 </h4>
             </div>
@@ -17,8 +17,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="item in todo.items">
-                                <td ng-repeat="cell in item">{{cell}}</td>
+                            <tr ng-repeat="rows in todo.items">
+                                <td ng-repeat="cell in rows">{{cell}}</td>
                             </tr>
                         </tbody>
                     </table>
