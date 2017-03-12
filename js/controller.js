@@ -86,7 +86,7 @@ ozApp.controller("ToDoCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', 
         for (var i = 0; i < $scope.ToDos.length; i++) {
             todoListCountAll += $scope.ToDos.items.length;
         }
-        RecordCount.ToDoCou = todoListCountAll;
+        RecordCount.ToDoCount = todoListCountAll;
     });
 }]);
 
