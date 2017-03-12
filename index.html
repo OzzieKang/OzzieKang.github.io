@@ -12,63 +12,63 @@
     <script src="js/app.js"></script>
     <script src="js/controller.js"></script>
 
-    <script src="Scripts/jquery.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-
-
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="css/starter-template.css" rel="stylesheet" />
     <link rel="shortcut icon" href="img/Jack-JackParr.png" />
 </head>
-<body  ng-controller="homeCtrl">
-    <nav class="navbar navbar-inverse navbar-fixed-top" >
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display sd -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"><img src="img/BobParrMr.png" alt="study" /></span>
-                    <span class="icon-bar"><img src="img/DashiellParrDas02.png" alt="Life" /></span>
-                    <span class="icon-bar"><img src="img/EdnaEMode.png" alt="Fun" /></span>
-                </button>
-                <a class="navbar-brand" href="/home">后院</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav" >
-                    <li><a href="/programing">Programing<span class="badge">{{RecordCount.ProgramingCount}}</span></a></li>
-                    <li><a href="/articles">Articles<span class="badge">{{RecordCount.ArticlesCount}}</span></a></li>
-                    <li><a href="/tips">Tips<span class="badge">{{RecordCount.TipsCount}}</span></a></li>
-                    <li><a href="/toDo">To Do List<span class="badge">{{RecordCount.ToDoListCount}}</span></a></li>
-                </ul>
-
-                <form class="navbar-form navbar-right">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
+<body>
+    <div id="wapper">
+        <div id="main">
+            <nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="homeCtrl">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display sd -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"><img src="img/BobParrMr.png" alt="study" /></span>
+                            <span class="icon-bar"><img src="img/DashiellParrDas02.png" alt="Life" /></span>
+                            <span class="icon-bar"><img src="img/EdnaEMode.png" alt="Fun" /></span>
+                        </button>
+                        <a class="navbar-brand" href="/home">后院</a>
                     </div>
-                </form>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/programing">Programing<span class="badge">{{RecordCount.ProgramingCount}}</span></a></li>
+                            <li><a href="/articles">Articles<span class="badge">{{RecordCount.ArticlesCount}}</span></a></li>
+                            <li><a href="/tips">Tips<span class="badge">{{RecordCount.TipsCount}}</span></a></li>
+                            <li><a href="/toDo">To Do List<span class="badge">{{RecordCount.ToDoListCount}}</span></a></li>
+                        </ul>
+
+                        <form class="navbar-form navbar-right">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="row">
+                <div class="col-xs-2 col-md-1">
+                    <img alt="Brand" src="img/Jack-JackParr.png">
+                </div>
+
+                <div class="col-xs-12 col-md-8">
+                    <div class="main" ng-view></div>
+                </div>
             </div>
         </div>
-    </nav>
-    <!--<div class="panel  panel-primary">
-        <div class="panel-heading">Page</div>-->
-        <div class="row">
-            <div class="col-xs-2 col-md-1">
-                <img alt="Brand" src="img/Jack-JackParr.png">
-            </div>
 
-            <div class="col-xs-12 col-md-8">
-                <div class="main" ng-view></div>
-            </div>
+        <div id="footer">
+            <footer>
+                <p class="copyright">Copyright (c) 2017. All rights reserved. Design by <a href="mailto:nextlife_ozzie@outlook.com">Ozzie</a></p>
+            </footer>
         </div>
-    <!--</div>-->
-
-    <div id="footer">
-        <footer>
-            <p class="copyright">Copyright (c) 2017. All rights reserved. Design by <a href="mailto:nextlife_ozzie@outlook.com">Ozzie</a></p>
-        </footer>
     </div>
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
 </body>
 </html>
