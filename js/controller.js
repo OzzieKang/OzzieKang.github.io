@@ -83,7 +83,7 @@ ozApp.controller("ToDoCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', 
     $http.get('/data/ToDoList.json').then(function (response) {
         $scope.ToDos = response.data;
         var todoListCountAll = 0;
-        for (var i = 0; i < $scope.ToDos,length; i++) {
+        for (var i = 0; i < $scope.ToDos.length; i++) {
             todoListCountAll += $scope.ToDos.items.length;
         }
         RecordCount.ToDoCou = todoListCountAll;
