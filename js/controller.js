@@ -29,7 +29,7 @@ ozApp.factory('RecordCount', ['$http', function ($http) {
     }
 
     $http.get('/data/BlogCount.json').then(function (response) {
-        data = response.ProgramingCount;
+        data = response;
     });
 
     return data;
