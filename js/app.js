@@ -10,8 +10,8 @@ ozApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $
         templateUrl: '/partials/programing.html',
         controller: 'ProgramCtrl'
     }).when('/toDo', {
-        templateUrl: '/partials/tips.html',
-        controller: 'TipsCtrl'
+        templateUrl: '/partials/todo.html',
+        controller: 'ToDoCtrl'
     }).when('/tips', {
         templateUrl: '/partials/tips.html',
         controller: 'TipsCtrl'

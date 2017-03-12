@@ -60,19 +60,27 @@ ozApp.controller("ProgramCtrl", ['$scope', '$http', '$routeParams', 'RecordCount
     RecordCount.ProgramingCount = $("section div div div").filter(".panel-heading").length;
 }]);
 
-ozApp.controller("ArticalCtrl", ['$scope', '$routeParams', 'RecordCount', function ($scope, $routeParams, RecordCount) {
+ozApp.controller("ArticalCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', function ($scope, $http, $routeParams, RecordCount) {
     $scope.RecordCount = RecordCount;
     RecordCount.ArticlesCount = $("section div div div").filter(".panel-heading").length;
     //$scope.tipsCount = TipsCount.getData();
 }]);
 
-ozApp.controller("TipsCtrl", ['$scope', '$routeParams', 'RecordCount', function ($scope, $routeParams, RecordCount) {
+ozApp.controller("TipsCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', function ($scope, $http, $routeParams, RecordCount) {
     $scope.RecordCount = RecordCount;
-    RecordCount.TipsCount = $("section div div div").filter(".panel-heading").length;
+    var itemCount=$("section div div div").filter(".panel-heading").length;
+    if (RecordCount.TipsCount != itemCount) {
+        RecordCount.TipsCout = itemCount;
+        $http.post("/data/BlogCount.json", $scope.languages).then(function (data) {
+            $scope.msg = "Data saved";
+        });
+    } else {
+        RecordCount.TipsCout = RecordCount.TipsCout;
+    }
     //$scope.tipsCount = TipsCount.getData();
 }]);
 
-ozApp.controller("ToDoCtrl", ['$scope', '$routeParams', 'RecordCount', function ($scope, $routeParams, RecordCount) {
+ozApp.controller("ToDoCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', function ($scope, $http, $routeParams, RecordCount) {
     $scope.RecordCount = RecordCount;
     RecordCount.ToDoListCount = $("section div div div").filter(".panel-heading").length;
     //$scope.tipsCount = TipsCount.getData();
