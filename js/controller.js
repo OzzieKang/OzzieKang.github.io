@@ -13,14 +13,19 @@ ozApp.factory('ozAppData', function () {
     };
 });
 
-ozApp.factory('RecordCount',  function () {
+ozApp.factory('RecordCount',['$http',  function ($http) {
 
-    return {
-        ProgramingCount: 0,
-        ArticlesCount:0,
-        TipsCount: 0
-    };
-});
+    //return {
+    //    ProgramingCount: 0,
+    //    ArticlesCount:0,
+    //    TipsCount: 0,
+    //    ToDoCount:0
+    //};
+
+     $http.get('/data/BlogCount.json').then(function (data) {
+         return data;
+    });
+}]);
 
 ozApp.factory('listID', function () {
 
@@ -36,11 +41,17 @@ ozApp.factory('listID', function () {
     };
 });
 
-ozApp.controller("homeCtrl", ['$scope', '$routeParams', 'RecordCount', function ($scope, $routeParams, RecordCount) {
+ozApp.controller("homeCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', function ($scope,$http, $routeParams, RecordCount) {
+    //$scope.RecordCount = RecordCount;
+    //RecordCount.ProgramingCount = $("section div div div").filter(".panel-heading").length;
+    //RecordCount.ArticlesCount = $("section div div div").filter(".panel-heading").length;
+    //RecordCount.TipsCount = $("section div div div").filter(".panel-heading").length;
+
     $scope.RecordCount = RecordCount;
-    RecordCount.ProgramingCount = $("section div div div").filter(".panel-heading").length;
-    RecordCount.ArticlesCount = $("section div div div").filter(".panel-heading").length;
-    RecordCount.TipsCount = $("section div div div").filter(".panel-heading").length;
+    RecordCount.ProgramingCount = RecordCount.ProgramingCount;
+    RecordCount.ArticlesCount = RecordCount.ArticlesCount;
+    RecordCount.TipsCount = RecordCount.TipsCount;
+    RecordCount.ToDoListCount = RecordCount.ToDoCount;
 }]);
 
 ozApp.controller("ProgramCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', function ($scope, $http, $routeParams, RecordCount) {
@@ -59,6 +70,12 @@ ozApp.controller("ArticalCtrl", ['$scope', '$routeParams', 'RecordCount', functi
 }]);
 
 ozApp.controller("TipsCtrl", ['$scope', '$routeParams', 'RecordCount', function ($scope, $routeParams, RecordCount) {
+    $scope.RecordCount = RecordCount;
+    RecordCount.TipsCount = $("section div div div").filter(".panel-heading").length;
+    //$scope.tipsCount = TipsCount.getData();
+}]);
+
+ozApp.controller("ToDoCtrl", ['$scope', '$routeParams', 'RecordCount', function ($scope, $routeParams, RecordCount) {
     $scope.RecordCount = RecordCount;
     RecordCount.TipsCount = $("section div div div").filter(".panel-heading").length;
     //$scope.tipsCount = TipsCount.getData();
