@@ -49,7 +49,7 @@ ozApp.controller("homeCtrl", ['$scope', '$http', 'RecordCount', function ($scope
         RecordCount.ProgramingCount = response.data.ProgramingCount;
         RecordCount.ArticlesCount = response.data.ArticlesCount;
         RecordCount.TipsCount = response.data.TipsCount;
-        RecordCount.ToDoListCount = response.data.ToDoCount;
+        RecordCount.ToDoCount = response.data.ToDoCount;
     });
 
 
@@ -82,7 +82,7 @@ ozApp.controller("TipsCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', 
 
 ozApp.controller("ToDoCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', function ($scope, $http, $routeParams, RecordCount) {
     $scope.RecordCount = RecordCount;
-    RecordCount.ToDoListCount = $("section div div div").filter(".panel-heading").length;
+    RecordCount.ToDoCount = $("section div div div").filter(".panel-heading").length;
     //$scope.tipsCount = TipsCount.getData();
 }]);
 
