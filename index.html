@@ -22,7 +22,7 @@
     <link rel="shortcut icon" href="img/Jack-JackParr.png" />
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top"  ng-controller="homeCtrl">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display sd -->
             <div class="navbar-header">
@@ -37,7 +37,7 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav"  ng-controller="homeCtrl">
+                <ul class="nav navbar-nav" >
                     <li><a href="/programing">Programing<span class="badge">{{RecordCount.ProgramingCount}}</span></a></li>
                     <li><a href="/articles">Articles<span class="badge">{{RecordCount.ArticlesCount}}</span></a></li>
                     <li><a href="/tips">Tips<span class="badge">{{RecordCount.TipsCount}}</span></a></li>
