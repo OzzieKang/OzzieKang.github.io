@@ -21,6 +21,7 @@ body {
 
 .row {
     padding-bottom: 80px;
+    text-align:right;
 }
 
 .copyright {
@@ -31,16 +32,16 @@ body {
 }
 
 .myIcon {
-    text-align:center;
+    /*text-align:center;*/
     /*height: 200px;
     width: 200px;*/
 }
 
 .image_round {
     /*margin-top: 100px;*/
-    width: 128px;
+    /*width: 128px;
     height: 128px;
-    border-radius: 128px;
+    border-radius: 128px;*/
 }
 
 .image_rect {
