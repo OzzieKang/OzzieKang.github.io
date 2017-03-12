@@ -51,8 +51,6 @@ ozApp.controller("homeCtrl", ['$scope', '$http', 'RecordCount', function ($scope
     RecordCount.TipsCount = RecordCount.TipsCount;
     RecordCount.ToDoCount = RecordCount.ToDoCount;
     //});
-
-
 }]);
 
 ozApp.controller("ProgramCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', function ($scope, $http, $routeParams, RecordCount) {
@@ -63,10 +61,10 @@ ozApp.controller("ProgramCtrl", ['$scope', '$http', '$routeParams', 'RecordCount
 ozApp.controller("ArticalCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', function ($scope, $http, $routeParams, RecordCount) {
     $scope.RecordCount = RecordCount;
     RecordCount.ArticlesCount = $("section div div div").filter(".panel-heading").length;
-    
+
 }]);
 
-ozApp.controller("TipsCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', function ($scope, $http, $routeParams, RecordCount) {
+ozApp.controller("TipsCtrl", ['$scope',  '$routeParams', 'RecordCount', function ($scope, $routeParams, RecordCount) {
     $scope.RecordCount = RecordCount;
     RecordCount.TipsCount = $("section div div div").filter(".panel-heading").length;
     //if (RecordCount.TipsCount != itemCount) {
@@ -77,14 +75,18 @@ ozApp.controller("TipsCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', 
     //} else {
     //    RecordCount.TipsCount = RecordCount.TipsCount;
     //}
-
 }]);
 
 ozApp.controller("ToDoCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', function ($scope, $http, $routeParams, RecordCount) {
     $scope.RecordCount = RecordCount;
+
     $http.get('/data/ToDoList.json').then(function (response) {
         $scope.ToDos = response.data;
-        RecordCount.ToDoCount = $("section div div div").filter(".panel-heading").length;
+        var todoListCountAll = 0;
+        for (var i = 0; i < $scope.ToDos,length; i++) {
+            todoListCountAll += $scope.ToDos.items.length;
+        }
+        RecordCount.ToDoCou = todoListCountAll;
     });
 }]);
 
