@@ -45,12 +45,12 @@ ozApp.controller("homeCtrl", ['$scope', '$http', 'RecordCount', function ($scope
 
     $scope.RecordCount = RecordCount;
 
-    $http.get('/data/BlogCount.json').then(function (response) {
-        RecordCount.ProgramingCount = response.data.ProgramingCount;
-        RecordCount.ArticlesCount = response.data.ArticlesCount;
-        RecordCount.TipsCount = response.data.TipsCount;
-        RecordCount.ToDoCount = response.data.ToDoCount;
-    });
+    //$http.get('/data/BlogCount.json').then(function (response) {
+    RecordCount.ProgramingCount = RecordCount.ProgramingCount;
+    RecordCount.ArticlesCount = RecordCount.ArticlesCount;
+    RecordCount.TipsCount = RecordCount.TipsCount;
+    RecordCount.ToDoCount = RecordCount.ToDoCount;
+    //});
 
 
 }]);
@@ -63,27 +63,27 @@ ozApp.controller("ProgramCtrl", ['$scope', '$http', '$routeParams', 'RecordCount
 ozApp.controller("ArticalCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', function ($scope, $http, $routeParams, RecordCount) {
     $scope.RecordCount = RecordCount;
     RecordCount.ArticlesCount = $("section div div div").filter(".panel-heading").length;
-    //$scope.tipsCount = TipsCount.getData();
+    
 }]);
 
 ozApp.controller("TipsCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', function ($scope, $http, $routeParams, RecordCount) {
     $scope.RecordCount = RecordCount;
-    var itemCount = $("section div div div").filter(".panel-heading").length;
-    if (RecordCount.TipsCount != itemCount) {
-        RecordCount.TipsCount = itemCount;
-        $http.post('/data/BlogCount.json', RecordCount).then(function (data) {
-            $scope.msg = "Data saved";
-        });
-    } else {
-        RecordCount.TipsCount = RecordCount.TipsCount;
-    }
-    //$scope.tipsCount = TipsCount.getData();
+    RecordCount.TipsCount = $("section div div div").filter(".panel-heading").length;
+    //if (RecordCount.TipsCount != itemCount) {
+    //    RecordCount.TipsCount = itemCount;
+    //    $http.post('/data/BlogCount.json', RecordCount).then(function (data) {
+    //        $scope.msg = "Data saved";
+    //    });
+    //} else {
+    //    RecordCount.TipsCount = RecordCount.TipsCount;
+    //}
+
 }]);
 
 ozApp.controller("ToDoCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', function ($scope, $http, $routeParams, RecordCount) {
     $scope.RecordCount = RecordCount;
     RecordCount.ToDoCount = $("section div div div").filter(".panel-heading").length;
-    //$scope.tipsCount = TipsCount.getData();
+
 }]);
 
 ozApp.controller("ListController", ['$scope', '$routeParams', '$http', 'NgTableParams', 'ozAppData', 'listID', function ($scope, $routeParams, $http, NgTableParams, ozAppData, listID) {
