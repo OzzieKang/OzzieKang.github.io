@@ -1,3 +1,29 @@
 ﻿<section>
-
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-info" ng-repeat="todo in ToDos">
+            <div class="panel-heading" role="tab" id="{{todo.headID}}">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#{{todo.collapseID}}" target="_self" aria-expanded="false" aria-controls="{{todo.collapseID}}">
+                        {{todo.title}}
+                    </a>
+                </h4>
+            </div>
+            <div id="{{todo.collapseID}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="{{todo.headID}}">
+                <div class="panel-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th ng-repeat="header in todo.tableHeader">{{header}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in todo.items">
+                                <td ng-repeat="cell in item">{{cell}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>

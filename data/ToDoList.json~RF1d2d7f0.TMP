@@ -35,8 +35,7 @@
   {
     "headID": "headingTwo",
     "collapseID": "collapseTwo",
-    "title": "锻炼",
-    "tableHeader": [ "项目", "个数(分钟）", "状态", "日期" ],
+    "titile": "锻炼",
     "items": [
       {
         "项目": "仰卧起坐",
