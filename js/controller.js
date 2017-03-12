@@ -15,24 +15,12 @@ ozApp.factory('ozAppData', function () {
 
 ozApp.factory('RecordCount', ['$http', function ($http) {
 
-    //return {
-    //    ProgramingCount: 0,
-    //    ArticlesCount:0,
-    //    TipsCount: 0,
-    //    ToDoCount:0
-    //};
-    var data = {
+    return {
         ProgramingCount: 0,
-        ArticlesCount: 0,
+        ArticlesCount:0,
         TipsCount: 0,
-        ToDoCount: 0
-    }
-
-    $http.get('/data/BlogCount.json').then(function (response) {
-        data = response.data;
-    });
-
-    return data;
+        ToDoCount:0
+    };
 }]);
 
 ozApp.factory('listID', function () {
@@ -56,10 +44,15 @@ ozApp.controller("homeCtrl", ['$scope', '$http', 'RecordCount', function ($scope
     //RecordCount.TipsCount = $("section div div div").filter(".panel-heading").length;
 
     $scope.RecordCount = RecordCount;
-    RecordCount.ProgramingCount = RecordCount.ProgramingCount;
-    RecordCount.ArticlesCount = RecordCount.ArticlesCount;
-    RecordCount.TipsCount = RecordCount.TipsCount;
-    RecordCount.ToDoListCount = RecordCount.ToDoCount;
+
+    $http.get('/data/BlogCount.json').then(function (response) {
+        RecordCount.ProgramingCount = response.data.ProgramingCount;
+        RecordCount.ArticlesCount = response.data.ArticlesCount;
+        RecordCount.TipsCount = response.data.TipsCount;
+        RecordCount.ToDoListCount = response.data.ToDoCount;
+    });
+
+
 }]);
 
 ozApp.controller("ProgramCtrl", ['$scope', '$http', '$routeParams', 'RecordCount', function ($scope, $http, $routeParams, RecordCount) {
