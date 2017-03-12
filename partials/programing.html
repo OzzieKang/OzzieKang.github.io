@@ -10,21 +10,7 @@
                 </h4>
             </div>
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body">
-                    <p>
-                        使用angularJS+booststrap时，bootstrap有些组件比如标签页或者Collape需要href="#id"的方式进行切换，这样就会与angularJS的路由冲突，点了以后会变成angularJS的路由跳转。
-                    </p>
-                    <p>
-                        This is because of HTML link rewriting of Angular, explained here.
-                    </p>
-                    <p>
-                        To prevent rewriting of location, add 'target="_self"' to those bootstrap links.
-                    </p>
-                    <p>So instead of <code>&lt;a href="#myModal"&gt;</code> you need <code>&lt;a href="#myModal" target="_self"&gt;</code></p>
-                    <!--<xmp>So instead of <a href="#myModal">, you need <a href="#myModal" target="_self"></xmp>-->
-                    <p>
-                        Answer from : <a href="http://stackoverflow.com/questions/17251864/href-causes-unintended-page-reload-with-angularjs-and-twitter-bootstrap">stackoverflow.com</a>
-                    </p>
+                <div class="panel-body" ng-include="'/fractions/P1.html'">
                 </div>
             </div>
         </div>
@@ -38,7 +24,7 @@
                 </h4>
             </div>
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                <div class="panel-body" ng-include="{{templates.url}}">
+                <div class="panel-body" ng-include="'/fractions/P2.html'">
                 </div>
             </div>
         </div>
@@ -52,52 +38,9 @@
                 </h4>
             </div>
             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                <div class="panel-body">
-                    <code>
-                        <xmp>
-                            <html>
-                            <head>
-                                <style type="text/css">
-                                    html {
-                                        height: 100%;
-                                    }
-
-                                    body {
-                                        min-height: 100%;
-                                        margin: 0;
-                                        padding: 0;
-                                        position: relative;
-                                    }
-
-                                    .header {
-                                        background-color: #ffe4c4;
-                                    }
-
-                                    .main {
-                                        padding-bottom: 100px;
-                                        background-color: #bdb76b;
-                                    }
-                                    /* main的padding-bottom值要等于或大于footer的height值 */
-                                    .footer {
-                                        position: absolute;
-                                        bottom: 0;
-                                        width: 100%;
-                                        height: 100px;
-                                        background-color: #ffc0cb;
-                                    }
-                                </style>
-                            </head>
-                            <body>
-                                <div class="header">header</div>
-                                <div class="main">main content</div>
-                                <div class="footer">footer</div>
-                            </body>
-                        </html>
-                    </xmp>
-                </code>
+                <div class="panel-body"  ng-include="'/fractions/P3.html'">
+                </div>
             </div>
         </div>
     </div>
-
-</div>
 </section>

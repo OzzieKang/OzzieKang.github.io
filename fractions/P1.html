@@ -1,0 +1,14 @@
+﻿<p>
+    使用angularJS+booststrap时，bootstrap有些组件比如标签页或者Collape需要href="#id"的方式进行切换，这样就会与angularJS的路由冲突，点了以后会变成angularJS的路由跳转。
+</p>
+<p>
+    This is because of HTML link rewriting of Angular, explained here.
+</p>
+<p>
+    To prevent rewriting of location, add 'target="_self"' to those bootstrap links.
+</p>
+<p>So instead of <code>&lt;a href="#myModal"&gt;</code> you need <code>&lt;a href="#myModal" target="_self"&gt;</code></p>
+<!--<xmp>So instead of <a href="#myModal">, you need <a href="#myModal" target="_self"></xmp>-->
+<p>
+    Answer from : <a href="http://stackoverflow.com/questions/17251864/href-causes-unintended-page-reload-with-angularjs-and-twitter-bootstrap">stackoverflow.com</a>
+</p>
