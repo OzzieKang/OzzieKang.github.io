@@ -12,18 +12,40 @@ body {
 /* footer */
 #footer {
     background: #000000;
-    padding: 20px 0 5px;
+    /*padding: 20px 0 5px;*/
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 100px;
+    height: 80px;
 }
 
 .row {
-    padding-bottom: 100px;
+    padding-bottom: 80px;
 }
 
 .copyright {
     color: #fff;
     text-align: center;
+    width: 100%;
+    height: 50px;
+}
+
+.myIcon {
+    text-align:center;
+    /*height: 200px;
+    width: 200px;*/
+}
+
+.image_round {
+    /*margin-top: 100px;*/
+    width: 128px;
+    height: 128px;
+    border-radius: 128px;
+}
+
+.image_rect {
+    margin-top: 100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
 }
