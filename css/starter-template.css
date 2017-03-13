@@ -29,7 +29,9 @@ body {
     width: 100%;
     height: 50px;
 }
-
+.main{
+    text-align:center;
+}
 .myIcon {
     text-align:center;
     /*height: 200px;
