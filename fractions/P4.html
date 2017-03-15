@@ -1,0 +1,26 @@
+﻿<p>
+    When we working on multiple SQL servers and multiple application types.
+</p>
+<p>
+    we can identify which application is access the database by adding <b>Application Name</b> attribute in the connection string.
+</p>
+<p>
+    Then we can identify the unauthrorized access.
+</p>
+
+<code>
+<xmp>
+    <?xml version="1.0" encoding="utf-8" ?>
+    <configuration>
+        <connectionstrings>
+            <add name="ConnectionName" connectionstring="Persist Security Info=True;Data Source=SQLSRV1; Initial Catalog=DB1;User Id=**;Password=**; Application Name=APP-9299;" />
+        </connectionstrings>
+        <startup>
+            <supportedruntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+        </startup>
+    </configuration>
+</xmp>
+</code>
+<p>
+    Thanks for VK's sharing.:)
+</p>
